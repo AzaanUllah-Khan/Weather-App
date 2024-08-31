@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Assets/image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <nav>
+                <h1 id="cityname">Multan</h1>
+                <h1 id="date">21.04.24</h1>
+            </nav>
+            <div class="middle">
+                <div class="flex">
+                    <h1 id="degree">20°</h1>
+                    <div class="icons">
+                        <p><i class="fa-solid fa-wind"></i> <span id="windspeed"></span> mph</p>
+                        <p><i class="fa-solid fa-droplet"></i> <span id="humidity"></span>%</p>
+                    </div>
+                </div>
+                <h1 id="desc">Cloudy</h1>
+            </div>
+            <div class="tabs">
+                <div class="card">
+                    <h2>Today</h2>
+                    <h1>20°</h1>
+                    <h3>Mist</h3>
+                </div>
+                <div class="card">
+                    <h2>Today</h2>
+                    <h1>20°</h1>
+                    <h3>Mist</h3>
+                </div>
+                <div class="card">
+                    <h2>Today</h2>
+                    <h1>20°</h1>
+                    <h3>Mist</h3>
+                </div>
+                <div class="card">
+                    <h2>Today</h2>
+                    <h1>20°</h1>
+                    <h3>Mist</h3>
+                </div>
+                <div class="card">
+                    <h2>Today</h2>
+                    <h1>20°</h1>
+                    <h3>Mist</h3>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <nav>
+                <h1 id="greeting">Good Morning</h1>
+                <h1 id="time">12:27 PM</h1>
+            </nav>
+            <div class="middle">
+                <div class="flex">
+                    <h1 id="degree1">20°</h1>
+                    <div class="icons">
+                        <p><i class="fa-solid fa-wind"></i> <span id="windspeed1"></span> mph</p>
+                        <p><i class="fa-solid fa-droplet"></i> <span id="humidity1"></span>%</p>
+                    </div>
+                </div>
+                <h2 id="feelslike">Cloudy</h2>
+                <h3 id="desc1">Cloudy</h3>
+            </div>
+            <div class="input">
+                <input type="text" id="input">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
