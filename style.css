@@ -72,8 +72,8 @@ body {
 }
 .container .left .middle .flex .icons{
     position: absolute;
-    right: -30px;
-    bottom: -5px;
+    right: -40px;
+    bottom: -0px;
     font-weight: 300;
     font-size: 14px;
 }
@@ -87,8 +87,14 @@ body {
 .container .left .tabs{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 15px;
+    max-width: 70%;
+    overflow: auto;
+    margin: 0 auto;
+}
+::-webkit-scrollbar{
+    width: 0;
 }
 .container .left .tabs .card{
     display: flex;
@@ -97,6 +103,8 @@ body {
     flex-direction: column;
     border-radius: 7px;
     padding: 7px 10px;
+    cursor: pointer;
+    width: 100px;
 }
 .container .left .tabs .card:nth-child(1){
     border: 1px solid #dadada;
@@ -116,6 +124,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     color: #b9b9b9;
+    text-align: center;
 }
 .container .right{
     height: 100%;

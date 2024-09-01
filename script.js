@@ -19,7 +19,7 @@ async function getWeatherData(cityName) {
         function formatDate(dateString) {
             const date = new Date(dateString);
             const day = String(date.getDate()).padStart(2, '0');
-            const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+            const month = String(date.getMonth() + 1).padStart(2, '0');
             const year = String(date.getFullYear()).slice(-2);
             return `${day}.${month}.${year}`;
         }
@@ -77,6 +77,9 @@ async function getWeatherData(cityName) {
 
         const dailyData = weatherData.list.filter((entry) => entry.dt_txt.includes("12:00:00"));
 
+        const tabsElement = document.getElementById("tabs");
+        tabsElement.innerHTML = ''; // Clear any existing content
+
         dailyData.slice(0, 7).forEach((entry) => {
             function getDayName(dateString) {
                 const date = new Date(dateString);
@@ -85,20 +88,22 @@ async function getWeatherData(cityName) {
             }
             
             const dayOfWeek = getDayName(entry.dt_txt);
-            console.log(dayOfWeek);
-            
-            const weatherDescription = entry.weather[0].description;
-            const temperature = (entry.main.temp - 273.15).toFixed(2);
-            const feelsLike = (entry.main.feels_like - 273.15).toFixed(2);
-            const humidity = entry.main.humidity;
-            const windSpeed = entry.wind.speed;
+            const weatherDescription = capitalizeWords(entry.weather[0].description);
+            const temperature = (entry.main.temp - 273.15).toFixed(0);
 
-            console.log(`${date}:`);
-            console.log(`Description: ${weatherDescription}`);
-            console.log(`Temperature: ${temperature}°C`);
-            console.log(`Feels Like: ${feelsLike}°C`);
-            console.log(`Humidity: ${humidity}%`);
-            console.log(`Wind Speed: ${windSpeed} m/s\n`);
+            // Create a new card element
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            // Populate the card with the weather information
+            card.innerHTML = `
+                <h2>${dayOfWeek}</h2>
+                <h1>${temperature}°</h1>
+                <h3>${weatherDescription}</h3>
+            `;
+
+            // Append the card to the tabs element
+            tabsElement.appendChild(card);
         });
     } catch (error) {
         console.error('Error fetching weather data:', error);
@@ -106,7 +111,7 @@ async function getWeatherData(cityName) {
 }
 
 function getCityWeather() {
-    const cityName = document.getElementById("input").value
+    const cityName = document.getElementById("input").value;
     if (cityName) {
         getWeatherData(cityName);
     } else {
@@ -114,7 +119,7 @@ function getCityWeather() {
     }
 }
 
-document.getElementById("input").addEventListener("change", (() => { getCityWeather() }))
+document.getElementById("input").addEventListener("change", (() => { getCityWeather() }));
 
 document.querySelector('.container .right .input input').addEventListener('focus', function () {
     this.parentElement.classList.add('focused');
