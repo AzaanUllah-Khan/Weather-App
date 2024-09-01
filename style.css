@@ -238,8 +238,9 @@ body {
         margin-bottom: 20px;
     }
 }
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 500px) {
     body{
         align-items: start;
+        padding-top: 50px;
     }
 }
