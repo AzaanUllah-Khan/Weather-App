@@ -6,7 +6,7 @@ async function getWeatherData(cityName) {
         const geoData = await geoResponse.json();
 
         if (geoData.length === 0) {
-            console.log('City not found.');
+            console.log('City not found.'); 
             return;
         }
 
