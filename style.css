@@ -29,6 +29,8 @@ body {
     height: 100%;
     background-color: white;
     border-radius: 25px 0 0 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 .container .right {
@@ -199,4 +201,45 @@ body {
 }
 .container .right .input.focused {
     border-top: 2px solid #e9e9e9;
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        height: auto;
+        flex-direction: column;
+        width: 90%;
+        border-radius: 25px;
+    }
+    .container .right{
+        width: 100%;
+        border-radius: 0 0 25px 25px;
+        border-bottom-left-radius: 25px;
+    }
+    .container .right .middle{
+        margin: 20px 0 30px;
+    }
+    .container .right nav{
+        display: flex;
+        flex-direction: row;
+        padding: 15px 50px;
+        font-size: 16px !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .container .right nav h1{
+        font-size: 16px !important;
+    }
+    .container .left{
+        width: 100%;
+        border-radius: 25px 25px 0 0;
+    }
+    .container .left #tabs{
+        order: 0;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-height: 700px) {
+    body{
+        align-items: start;
+    }
 }
