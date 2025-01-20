@@ -161,24 +161,24 @@ body {
 }
 .container .right .middle h1{
     font-size: 30px;
-    color: #0271ff;
+    color: #111;
 }
 .container .right .middle h2{
     font-size: 12px;
     font-weight: 300;
-    color: #0271ff;
+    color: #111;
 }
 .container .right .middle h3{
     font-size: 18px;
     font-weight: 500;
-    color: #0271ff;
+    color: #111;
     margin-top: 5px;
 }
 .container .right .middle i{
-    color: #0271ff;
+    color: #111;
 }
 .container .right .middle p{
-    color: #0271ff;
+    color: #111;
     font-size: 14px;
 }
 .container .right .middle .flex{
@@ -200,7 +200,7 @@ body {
     outline: none;
 }
 .container .right .input.focused {
-    border-top: 2px solid #e9e9e9;
+    border-top: 2px solid #cce2ff;
 }
 
 @media screen and (max-width: 900px) {
