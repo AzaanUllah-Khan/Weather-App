@@ -36,4 +36,4 @@ The app uses the OpenWeatherMap API. Make sure to replace the placeholder API ke
 
 ## 🌍 Live Demo
 
-[Check out the live demo here!](https://weatherapp-azaan.netlify.app)
+[Check out the live demo here](https://weatherapp-azaan.netlify.app)
